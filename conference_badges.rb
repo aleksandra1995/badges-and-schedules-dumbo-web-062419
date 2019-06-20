@@ -22,6 +22,15 @@ end
      room_assignments
    end
    
-   def printer
-    
+   
+   def printer(array)
+    array.each do |print|
+      puts "#{assign_rooms}"
+      batch_badge_creator
+    end
    end
+   
+   
+   
+   
+   
