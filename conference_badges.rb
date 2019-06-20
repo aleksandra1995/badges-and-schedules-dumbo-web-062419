@@ -10,11 +10,19 @@ def batch_badge_creator(names)
     "Hello, my name is #{name}."
   end
 end
-   def assign_rooms(list)
-     i = 0
-     list.each do |list_item |
-       i += 1
-      "Hello, #{list_item}! You'll be assigned to room #{i}"
+
+
+
+
+   def assign_rooms(attendees)
+  room_assignments = []
+     attendees.each_with_index do |attendant, i|
+     room_assignments << "Hello, #{attendant}! You'll be assigned to room #{i+1}!"
      end
+     room_assignments
    end
    
+   def printer
+    puts batch_badge_creator
+     puts assign_rooms
+   end
